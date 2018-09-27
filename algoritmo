@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+plt.plot([-72.53126621200,-73.68263125400,-73.73216629000,-75.69002866700], [-13.99202975700,-11.23852662000,-11.05266063100,-14.03200469900], 'ro')
+plt.axis([-77.53126621200, -70.53126621200, -16.99202975700, -10.05266063100])
+plt.show()
+
+
+
+
+LEER GRAFOS
+
+def LeeMA2MA(filename):
+    """
+    Funcion lee un archivo que contiene un grafo en formato de matriz de adyacencia
+    y retorna una matriz de adyacencia
+    """
+    file = open(filename)
+    i = -1
+    for line in file:
+        if i == -1:
+            n = int(line)
+            G = [None for _ in range(n)]
+        else:
+            G[i] = [int(x) for x in line.split(' ')]
+        i +=1
+        
+    return G
