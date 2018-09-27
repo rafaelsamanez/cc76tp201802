@@ -1,0 +1,29 @@
+Introducción:
+El problema del vendedor viajero se resume en la siguiente pregunta: Dado un conjunto finito de ciudades y costos de viaje entre todos los pares de ciudades. Cual es la ruta más corta posible que visita cada ciudad exactamente una vez y al finalizar regresa a la ciudad de origen.Es decir encontrar la manera más barata o más corta de llegar a todas las ciudades una sola vez sin repetir y regresar.
+
+Motivación:
+El presente proyecto tiene como objetivo obtener un resultado satisfactorio al problema del vendedor viajero.Poder encontrar el camino más eficiente con menor gasto o recorrido que visite todas las ciudades encontradas en una lista determinada,  además de esto que se regrese en el mismo camino.
+
+
+OBJETIVOS:
+
+Implementar una función o una clase que permita generar el grafo de centros poblados del Perú a partir del dataset.
+Implementar estrategias de la solución al problema con los temas planteados en la clase.
+
+MARCO TEÓRICO:
+
+El Algoritmo del vecino más próximo (NN por sus siglas en inglés) o también llamado algoritmo voraz (greedy) permite al viajante elegir la ciudad no visitada más cercana como próximo movimiento. Este algoritmo retorna rápidamente una ruta corta. Para N ciudades aleatoriamente distribuidas en un plano, el algoritmo en promedio, retorna un camino de un 25% más largo que el menor camino posible.20​ Sin embargo, existen muchos casos donde la distribución de las ciudades dada hace que el algoritmo NN devuelva el peor camino (Gutin, Yeo, and Zverovich, 2002). Esto es verdad lo mismo para TSP simétricos que asimétricos (Gutin and Yeo, 2007). 
+Rosenkrantz et al. [1977] mostró que el algoritmo NN tiene un factor de aproximación de orden para instancias que satisfacen la desigualdad triangular. Una variación del algoritmo NN, llamada operador de Fragmento más cercano (NF por sus siglas en inglés) la cual conecta un grupo (fragmento) de ciudades no visitadas más cercanas, puede encontrar la ruta más corta con iteraciones sucesivas.21​ El operador NF puede ser aplicado también, en la obtención de soluciones iniciales para el algoritmo NN para además ser mejorado en un modelo elitista, donde solamente son aceptadas las mejores soluciones.
+Las construcciones basadas en un árbol de expansión mínima (minimum spanning tree) tienen una proporción de aproximación de 2. El Algoritmo de Christofides logra una proporción de 1.5.
+Match Twice and Stitch (MTS) (Kahng, Reda 200422​), es otra heurística constructiva, que realiza dos comparaciones secuenciales (matchings), donde el segundo macheo es ejecutado después de eliminar todas las aristas del primer macheo, retornando un conjunto de ciclos. Los ciclos son unidos para producir el camino final.
+
+
+Bibliografia:
+
+Rosenkrantz, Daniel J.; Stearns, Richard E.; Lewis, Philip M., II (1977), «An Analysis of Several Heuristics for the Traveling Salesman Problem», SIAM Journal on Computing 6 (5): 563-581, doi:10.1137/0206041.(21)
+Walshaw, Chris (2000), A Multilevel Approach to the Travelling Salesman Problem, CMS Press.(22)
+
+
+
+
+
