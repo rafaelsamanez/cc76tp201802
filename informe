@@ -17,6 +17,22 @@ Rosenkrantz et al. [1977] mostró que el algoritmo NN tiene un factor de aproxim
 Las construcciones basadas en un árbol de expansión mínima (minimum spanning tree) tienen una proporción de aproximación de 2. El Algoritmo de Christofides logra una proporción de 1.5.
 Match Twice and Stitch (MTS) (Kahng, Reda 200422​), es otra heurística constructiva, que realiza dos comparaciones secuenciales (matchings), donde el segundo macheo es ejecutado después de eliminar todas las aristas del primer macheo, retornando un conjunto de ciclos. Los ciclos son unidos para producir el camino final.
 
+Análisis
+La situación que se planteó para este proyecto fue encontrar una solución viable para el problema del vendedor viajero.
+Primero se tuvo que crear una función que genere el grafo con las conexiones de los centros poblados, para ello se abrió el archivo de los datos en Excel y luego se procedió a extraer las 2 columnas (x,y) .Después se empezó a crear una lista de adyacencia. Para dicho proceso se pensó en usar el código “UBIGEO”, sin embargo, fue descartada ya que no iban a tener muchas conexiones (iban a estar aisladas / grafos independientes). Por ello, se procedió a sacar las distancias y dependiendo de su valor se realizarían las conexiones .Ejemplo:
+If(distancia<=valor):
+// hacer conexión
+
+Una vez teniendo listo la lista de adyacencia en un “txt” , se procede a colocar los datos en una lista. Sin embargo, no se pudo capturar todo los datos ya que la lista tiene un cierto limite y el data set es demasiado grande. Por eso se capturo una pequeña porción de todo el data set.
+Por ultimo se procedió a la implemención de los algoritmos DFS , BFS, UCS. Siendo este ultimo el que mejor se desenvuelve para la solución mas optima.
+
+Conclusiones
+
+•	Para el gran tamaño de este data set se debería tener cuidado con los nodos, ya que, o podría tener 2 conexiones o menos, o bien podría tener 1000 a mas , y esto no lo soportaría la lista.
+•	Las conexiones entre los centros poblados se trató de que estén a una distancia de validación grande, tal que no se genere demasiadas conexiones.
+•	Si el data set demora en cargar mas de 5 min, deberíamos parar la ejecución y reducir los datos a la mitad del actual. Si el problema persiste, volver a reducirlo a la mitad.
+•	LA búsqueda de costo uniforme esta diseñada para este tipo de problemas , así que es una de las soluciones mas optimas.
+
 
 Bibliografia:
 
